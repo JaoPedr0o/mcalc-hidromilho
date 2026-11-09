@@ -1,0 +1,46 @@
+{
+  "name": "hidramilho",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@expo-google-fonts/outfit": "^0.4.3",
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "^58.0.0",
+    "expo-font": "~58.0.11",
+    "expo-linear-gradient": "~58.0.3",
+    "expo-splash-screen": "~58.0.13",
+    "expo-status-bar": "~58.0.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "react-native-svg": "15.16.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "tsx --test tests/*.test.ts",
+    "test:cov": "tsx --test --experimental-test-coverage tests/*.test.ts",
+    "preview:esquemas": "tsx --tsconfig scripts/preview/tsconfig.json scripts/preview/esquemas.tsx",
+    "lint": "expo lint",
+    "preview:telas": "tsx --tsconfig scripts/preview/tsconfig.json scripts/preview/telas.tsx",
+    "typecheck": "tsc --noEmit",
+    "icons": "node scripts/gen-icons.js",
+    "logos": "node scripts/gen-logos.js",
+    "apk": "npx eas-cli@latest build --platform android --profile preview"
+  },
+  "private": true,
+  "description": "Calculadora de água para silagem de grão úmido (Expo / React Native)."
+}
