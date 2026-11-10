@@ -6,7 +6,7 @@ import {
   kgHParaKgMin, kgHParaKgS,
 } from './calc';
 import { cores, fontes, raio } from './theme';
-import { EsquemaProcesso } from './Processo';
+import { VideoProcesso } from './VideoProcesso';
 import type { EstadoLote } from './TelaLote';
 import { Card, Campo, CampoUmidade, Resultado, Selo, Aviso, corStatus, st } from './ui';
 
@@ -131,15 +131,15 @@ export function TelaVazao({ e, set, lote: comum, setLote }: {
               </View>
             )}
             {!recomendado && (
-              <Aviso tipo="fora" texto={`Nenhum cano da lista comporta ${fmt(lmin, 1)} L/min com folga. Divida em dois ramais ou use um cano maior que 2 1/2".`} />
+              <Aviso tipo="fora" texto={`Nenhum cano da lista comporta ${fmt(lmin, 1)} L/min com folga. Divida em dois ramais ou use um cano maior que os da lista.`} />
             )}
             {recomendado && escolhido && escolhido.di < recomendado.di && (
               <Aviso tipo="atencao" texto={`O cano de ${escolhido.pol} é pequeno para ${fmt(lmin, 1)} L/min. Use pelo menos ${recomendado.pol}.`} />
             )}
 
             <View style={{ marginTop: 16 }}>
-              <EsquemaProcesso milho={`${e.unidade === 't/h' ? fmt(vIn, 1) : milhar(vIn)} ${e.unidade}`} agua={`${fmt(lmin, 1)} L/min`} umid={`${fmt(uAlvo, 0)}%`} />
-              <Text style={st.dica}>
+              <VideoProcesso />
+              <Text style={[st.dica, { marginTop: 12 }]}>
                 A mangueira de água fica na saída do moinho, junto do milho moído. Regule o registro até a vazão medida chegar em {fmt(lmin, 1)} L/min.
               </Text>
             </View>

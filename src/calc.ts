@@ -124,8 +124,6 @@ export const CANOS: Cano[] = [
   { pol: '1"', dn: 32, di: 27.8 },
   { pol: '1 1/4"', dn: 40, di: 35.2 },
   { pol: '1 1/2"', dn: 50, di: 44.0 },
-  { pol: '2"', dn: 60, di: 53.4 },
-  { pol: '2 1/2"', dn: 75, di: 66.6 },
 ];
 
 /** Velocidade máxima recomendada da água no cano (m/s). A NBR 5626 limita instalações prediais a 3 m/s. */
