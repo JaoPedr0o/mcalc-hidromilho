@@ -34,7 +34,6 @@
     "web": "expo start --web",
     "test": "tsx --test tests/*.test.ts",
     "test:cov": "tsx --test --experimental-test-coverage tests/*.test.ts",
-    "preview:esquemas": "tsx --tsconfig scripts/preview/tsconfig.json scripts/preview/esquemas.tsx",
     "lint": "expo lint",
     "preview:telas": "tsx --tsconfig scripts/preview/tsconfig.json scripts/preview/telas.tsx",
     "typecheck": "tsc --noEmit",

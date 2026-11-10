@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo/mcalc-hidramilho.png" alt="Mcalc Hidramilho" width="520" />
+<img src="assets/logo/mcalc-hidramilho.png" alt="Hidramilho Mcalc" width="520" />
 
 ### Quanta água o milho precisa para ficar com a umidade certa?
 
@@ -17,13 +17,20 @@ Calculadora para **silagem de grão úmido**: informe o milho e a umidade que vo
 
 ---
 
+## Telas do app
+
+<div align="center">
+  <img src="docs/telas/1-lote.png" alt="Aba Lote: dados do lote" width="23%" />
+  <img src="docs/telas/2-resultado.png" alt="Aba Lote: resultado com a água a adicionar" width="23%" />
+  <img src="docs/telas/3-processo.png" alt="Aba Vazão: vídeo do processo com carreta, bazuca, moedor, mangueira e bolsão" width="23%" />
+  <img src="docs/telas/4-canos.png" alt="Aba Vazão: escolha do cano e velocidade da água" width="23%" />
+</div>
+
 ## Como funciona o processo
 
 Na prática do campo, o grão úmido é feito assim: a carreta joga o milho seco, pela **bazuca**, no **moinho** preso ao trator. Uma **mangueira** injeta a água na saída do moinho, junto com o milho moído, e o milho molhado cai no **bolsão** (uma vala forrada de plástico), onde é espalhado, compactado, coberto e fermenta.
 
-<div align="center">
-  <img src="docs/diagrama-processo.png" alt="Diagrama do processo: carreta, bazuca, moinho, mangueira de água e bolsão" width="720" />
-</div>
+Esse processo aparece em **vídeo** dentro do app, na aba Vazão, passando em loop e sem som (terceira tela abaixo).
 
 O segredo é a **água certa**: pouca deixa o grão seco demais, muita encharca. O Mcalc calcula a quantidade para chegar à umidade desejada, dentro da faixa segura de **30% a 40%**.
 
@@ -36,10 +43,10 @@ O segredo é a **água certa**: pouca deixa o grão seco demais, muita encharca.
 
 **Aba Vazão**
 - Converte a vazão de milho da bazuca (kg/h ou t/h) na **vazão de água em L/min**.
-- Compara as bitolas de cano pela velocidade da água (ideal de 0,4 a 2,5 m/s) e recomenda a menor que comporta a vazão.
+- Compara as bitolas de cano (de 1/2" a 1 1/2") pela velocidade da água (ideal de 0,4 a 2,5 m/s) e recomenda a menor que comporta a vazão. Se a vazão for grande demais para todas, avisa para usar um cano maior.
 - Confere a **vazão real medida** (enchendo um balde, por exemplo) e mostra a umidade que ela produz.
 - Com a massa do lote, calcula o **tempo de operação** e o **volume total de água**.
-- Mostra o diagrama do processo com os números do usuário.
+- Mostra um vídeo em loop explicando o processo, da carreta ao bolsão.
 
 **No geral**
 - A massa e as umidades são **compartilhadas entre as abas**: o que você digita em uma aparece na outra.
@@ -99,13 +106,14 @@ src/
   resumo.ts            texto do resultado para compartilhar
   TelaLote.tsx         aba Lote
   TelaVazao.tsx        aba Vazão
-  Processo.tsx         diagrama do processo
+  VideoProcesso.tsx    vídeo do processo (aba Vazão)
   Dialogo.tsx          janela de confirmação
   Logo*.tsx, coruja.json, marca.json, lockup.json   identidade visual
   theme.ts, ui.tsx     cores, fontes e componentes
+assets/                ícones, logos e o vídeo do processo
+docs/telas/             capturas de tela usadas no README
 tests/                 testes (node:test + tsx)
 scripts/               geradores de ícones e logos, e prévias
-docs/                  imagens do README
 ```
 
 ## Identidade visual
